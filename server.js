@@ -9,7 +9,7 @@ const upload = multer({dest: 'upload'})
 app.use('/static',express.static("publics"));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "template/index.html"))
+    res.sendFile(path.join(__dirname, "templates/index.html"))
 })
 
 app.post('/mergepdf', upload.array('pdfs', 2), async (req, res, next)=> {
